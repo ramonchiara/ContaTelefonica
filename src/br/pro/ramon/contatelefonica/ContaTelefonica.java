@@ -2,6 +2,11 @@ package br.pro.ramon.contatelefonica;
 
 public class ContaTelefonica {
 
+    private static final double ASSINATURA = 23.32;
+    private static final double VALOR_MIN_LOCAL = 0.09;
+    private static final double VALOR_MIN_DDD = 0.26;
+    private static final double VALOR_MIN_DDI = 0.86;
+
     private double minLocais;
     private double minDdd;
     private double minDdi;
@@ -13,19 +18,19 @@ public class ContaTelefonica {
     }
 
     public double getAssinatura() {
-        return 23.32;
+        return ASSINATURA;
     }
 
     public double getValorLocais() {
-        return 0.09 * minLocais;
+        return VALOR_MIN_LOCAL * minLocais;
     }
 
     public double getValorDdd() {
-        return 0.26 * minDdd;
+        return VALOR_MIN_DDD * minDdd;
     }
 
     public double getValorDdi() {
-        return 0.86 * minDdi;
+        return VALOR_MIN_DDI * minDdi;
     }
 
     public double getValorTotal() {
