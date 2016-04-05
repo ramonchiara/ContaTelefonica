@@ -12,13 +12,18 @@ public class Program {
 
         // PROCESSAMENTO
         ContaTelefonica conta = new ContaTelefonica(minLocais, minDdd, minDdi);
+        double assinatura = conta.getAssinatura();
+        double valorLocais = conta.getValorLocais();
+        double valorDdd = conta.getValorDdd();
+        double valorDdi = conta.getValorDdi();
+        double valorTotal = conta.getValorTotal();
 
         // SAÍDA
-        String mensagem = "Assinatura: " + conta.getAssinatura() + "\n"
-                + "Valor em Ligações Locais: " + conta.getValorLocais() + "\n"
-                + "Valor em Ligações DDD: " + conta.getValorDdd() + "\n"
-                + "Valor em Ligações DDI: " + conta.getValorDdi() + "\n"
-                + "Valor Total: " + conta.getValorTotal();
+        String mensagem = "Assinatura: " + assinatura + "\n"
+                + "Valor em Ligações Locais: " + valorLocais + "\n"
+                + "Valor em Ligações DDD: " + valorDdd + "\n"
+                + "Valor em Ligações DDI: " + valorDdi + "\n"
+                + "Valor Total: " + valorTotal;
         JOptionPane.showMessageDialog(null, mensagem);
     }
 
